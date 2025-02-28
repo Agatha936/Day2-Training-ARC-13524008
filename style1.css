@@ -1,0 +1,209 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+/*===================VARIABLE=====================*/
+:root {
+    --header-height: 3.5 rem;
+
+    /*=============WARNA============*/
+    --title-color: rgb(56, 41, 43);
+    --text-color: rgb(145, 86, 96);
+    --body-color: rgb(230, 170, 180);
+    --container-color: rgb(240, 210, 214);
+    --shadow: rgb(65, 56, 57);
+
+    /*=============FONT=============*/
+    --body-font: 'Poppins', sans-serif;
+    --biggest-font-size: 4rem;
+    --h1-size: 2.25rem;
+    --h2-size: 1.5rem;
+    --h3-size: 1.25rem;
+    --normal-size: 1rem;
+    --small-size: 0.875rem;
+    --smaller-size: 0.813;
+}
+
+.button:hover {
+    background: var(--body-color);
+}
+
+.button__icon {
+    font-size: 1.25rem;
+}
+
+.button--link {
+    color: var(--title-color);
+}
+
+.button--flex {
+    display: inline-flex;
+    column-gap: .5rem;
+}
+
+.body {
+    font-family: var(--body-font);
+}
+
+.container {
+    max-width: 968px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.grid {
+    display: grid;
+}
+
+/*=====================HEADER====================*/
+.header {
+    width: 100%;
+    background-color: transparent;
+    position: fixed;
+    left: 0;
+    top: 0;
+    right: 1rem;
+}
+
+/*=====================NAV=====================*/
+.nav__container {
+    height: calc(1.5rem);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    column-gap: 2rem;
+    font-family: var(--body-font);
+    font-weight: 600;
+    color: rgb(56, 41, 43);
+}
+
+.nav__menu {
+    display: flex;
+    align-items: center;
+    column-gap: 5rem;
+    font-family: var(--body-font);
+    color: var(--title-color);
+}
+
+.nav__link:hover {
+    color: rgb(145, 86, 96);
+    transform: scale(1.1);
+}
+
+.header {
+    background-color: var(--body-color);
+    box-shadow: 0 1px 4px var(--shadow);
+}
+
+/*=======================ACTIVE LINK========================*/
+.active-link {
+    position: relative;
+}
+
+.active-link::before {
+    content: '';
+    position: absolute;
+    bottom: -.75rem;
+    left: 45%;
+    width: 5px;
+    height: 5px;
+    background: var(--text-color);
+    border-radius: 50%;
+}
+
+/*=====================HOME=====================*/
+.main .top h1{
+    font-size: 50px;
+    font-family: var(--body-font);
+    color: var(--text-color);
+    padding-left: 15%;
+    padding-top: 8%;
+}
+.main .top .h1 span {
+    color: var(--title-color);
+}
+.home__content {
+    padding: 4rem 0 2rem;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 3rem;
+}
+
+.home__group {
+    display: grid;
+    position: relative;
+    padding-top: 1rem;
+    font-family: var(--body-font);
+}
+
+.home__data {
+    font-family: var(--body-font);
+}
+
+.home__data h3{
+    padding-top: 50px;
+    font-size: 50px;
+}
+
+.home__img {
+    
+    transform: translateY(-3rem);
+    justify-self: center;
+}
+
+
+.home__details-img {
+    position:absolute;
+    bottom: 0;
+    right: 58%;
+}
+
+.home__details-title,
+.home__details-subtitle {
+    display: block;
+    font-size: var(--small-size);
+    text-align: right;
+}
+
+.home__subtitle {
+    font-size: var(--normal-size);
+    text-transform: uppercase;
+    margin-bottom: 1.5rem;
+}
+
+.home__title {
+    font-size: 10rem;
+    font-weight: bold;
+    line-height: 109%;
+    margin-bottom: 1.5rem;
+}
+
+.home__description {
+    margin-bottom: 2.5rem;
+    padding-right: 2rem;
+}
+
+.home__button {
+    display: flex;
+    justify-content: space-between;
+}
+
+/*=============SCROLL UP==========*/
+.scrollup {
+    position: fixed;
+    right: 1rem;
+    bottom: 3rem;
+    background: var(--body-color);
+    border-radius: .4rem;
+    display: inline-flex;
+    padding: .25rem;
+    z-index: 1.5rem;
+    opacity: 80%;
+    transition: .4s;
+}
+
+.scrollup:hover {
+    opacity: 100%;
+}
+
+.scrollup__icon {
+    font-size: 1.5rem;
+    color: rgb(0, 0, 0);
+}
